@@ -1,0 +1,92 @@
+.services {
+    background-color: #70bfff;
+    
+
+    &__bg {
+        padding: 90px 0;
+    }
+
+    &__bg:after {
+        content: '';
+        background: url(../img/sec4.png);
+        background-repeat: no-repeat;
+        width: 462px;
+        height: 527px;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        z-index: 0;
+        transform: translate(0, -50%);
+    }
+
+
+    .services__btn {
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+        position: relative;
+        width: 100%;
+        max-width: 400px;
+        padding: 40px 100px 40px 70px;
+        font-size: 2rem;
+        outline: 0;
+        border: 0;
+        font-weight: 700;
+        text-align: left;
+        margin-bottom: 20px;
+        z-index: 3;
+
+        @include hover {
+            box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
+        }
+
+        &--tac {
+            text-align: center;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: 100px;
+            border-left: 1px solid #9d9d9d;
+            top: 0;
+            bottom: 0;
+        }
+
+        & svg {
+            position: absolute;
+            top: 50%;
+            right: 50px;
+            transform: translate(50%, -50%);
+        }
+      }
+      
+    &__right {
+        width: 100%;
+        max-width: 570px;
+        text-align: center;
+        position: relative;
+
+        // &::after {
+        //     content: "";
+        //     background: url(../img/sec4.png);
+        //     background-position: center;
+        //     background-repeat: no-repeat;
+        //     width: 100%;
+        //     height: 527px;
+        //     position: absolute;
+        //     bottom: 0;
+        //     left: 0;
+        //     z-index: 0;
+        // }
+
+        & .h2-title {
+            margin: 0 auto;
+            color: #fff;
+            z-index: 5;
+            position: relative;
+            top: 50%;
+            transform: translate(0, -50%);
+            line-height: 1;
+        }
+    }  
+}

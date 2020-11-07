@@ -1,0 +1,151 @@
+.sec5 {
+
+    
+a, button {
+    transition: all .3s ease-in-out;
+    text-decoration: none;
+    color: inherit;
+    border: 0;
+    cursor: pointer;
+}
+
+font-size: 10px;
+font: 700 2rem 'Raleway', sans-serif;
+color: #fff;
+line-height: 2rem;
+background-color: #b07cf7;
+
+@media screen and (max-width: 1100px) {
+    & .container {
+        max-width: 400px;
+    }
+}
+
+& .container--sm {
+    max-width: 600px;
+    padding: 0 15px;
+    margin: 9rem auto 3.8rem;
+}
+
+& .text-center {
+    text-align: center;
+}
+
+& .title {
+    font-size: 9rem;
+    line-height: 2.5rem;
+}
+
+& .title-text {
+    font-weight: 300;
+    font-size: 1.7rem;
+    line-height: 2.5rem;
+}
+
+& .flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+& .card {
+    width: 370px;
+    height: 310px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    margin-top: 20px;
+}
+
+& .card:hover {
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.8);
+    transition: .3s ease-in;
+}
+
+& .card__picture {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 0
+}
+
+& .card:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, #ffffff00, #ffffff00 40%, rgb(0, 0, 0));
+    transition: all .3s ease-in;
+    transform: scale(1.2);
+}
+
+& .card:hover:after {
+    transform: scale(1);
+}
+
+& .datetime {
+    position: relative;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    top: 8%;
+    left: 8%;
+    padding: 8px;
+}
+
+& .datetime__day {
+    font-size: 3.2rem;
+}
+
+& .datetime__month {
+    text-transform: uppercase;
+    font-size: 2.1rem;
+    margin-top: 8px;
+}
+
+& .card__title {
+    position: absolute;
+    bottom: 55px;
+    z-index: 10;
+    line-height: 2.5rem;
+    padding: 0 20px;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+& .info {
+    position: absolute;
+    bottom: 25px;
+    z-index: 10;
+    font-weight: 300;
+    font-size: 1.3rem;
+    padding: 0 20px;
+}
+
+& .info__autor::before {
+    content: 'By ';
+}
+
+& .info__autor::after {
+    content: ' - ';
+}
+
+& .btn-more {
+    background-color: rgb(247, 43, 59);
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+    width: 200px;
+    height: 55px;
+    text-transform: uppercase;
+    margin: 50px auto;
+    display: block;
+  }
+  
+& .btn-more:hover {
+    background-color: rgba(247, 43, 60, 0.575);
+    opacity: .9;
+}
+
+}
