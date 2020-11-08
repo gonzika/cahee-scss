@@ -1,4 +1,4 @@
-header {
+.header {
     background-image: url('../img/sect1.jpg');
     background-position: top center;    
     background-repeat: no-repeat;    
@@ -8,7 +8,19 @@ header {
     margin: 4rem 0 0;
     position: relative;
     overflow: hidden;
+
+    &__img {
+        @include hover {
+            transform: scale(1.1);
+        }
+    }
+
+    @include screen($w350)  {
+        margin: 0;
+        height: initial;
+    }
 }
+
 
 .link {
     max-width: 100%;
@@ -17,6 +29,17 @@ header {
     bottom: 0;
     left: 0;
     right: 0;
+    text-align: center;
+
+    & svg {
+        @include hover {
+            fill: #ff6033;
+        }
+    }
+
+    @include screen($w350)  {
+        display: none;
+    }
 }
 
 .flex--left {
@@ -69,6 +92,10 @@ header {
     padding: 15px 25px;
     border: 0;
     margin-top: 35px;
+
+    @include hover {
+        box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.5);
+    }
 }
 
 .sec2 {
@@ -247,12 +274,12 @@ textarea.contact-form__input {
 footer {
     color: #b9b9b9;
     font-size: 1.6rem;
-    height: 90px;
     background-color: #262626;
-}
 
-footer .container {
-    align-items: center;
+
+    & .flex {
+        align-items: center;
+    }
 }
 
 .footer--red {
