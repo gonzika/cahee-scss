@@ -8,23 +8,37 @@
 
     <link rel="stylesheet" href="css/styles.css">
     <title>Cahee</title>
+
+    <script>
+        function closeMenu() {
+            document.getElementById('toggler-input').click();
+        }
+    </script>
 </head>
 
 <body>
-    <header class="header">
+    <header class="header" id="home">
         <div class="container">
             <div class="flex">
                 <a href="#" class="header__logo">
                     <img src="img/logo.png" alt="logo" class="header__img">
                 </a>
-                <ul class="header__lists">
-                    <li class="header__list"><a href="#">home</a></li>
-                    <li class="header__list"><a href="#">ABOUT</a></li>
-                    <li class="header__list"><a href="#">SERVICES</a></li>
-                    <li class="header__list"><a href="#">GALLERY</a></li>
-                    <li class="header__list"><a href="#">BLOG</a></li>
-                    <li class="header__list"><a href="#">CONTACT</a></li>
-                </ul>
+                <input type="checkbox" name="toggler-input" id="toggler-input">
+                <label id="toggler" for="toggler-input">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <nav>
+                    <ul class="header__lists">
+                        <li class="header__list"><a onclick="closeMenu()" href="#home">home</a></li>
+                        <li class="header__list"><a onclick="closeMenu()" href="#sec2">ABOUT</a></li>
+                        <li class="header__list"><a onclick="closeMenu()" href="#SERVICES">SERVICES</a></li>
+                        <li class="header__list"><a onclick="closeMenu()" href="#GALLERY">GALLERY</a></li>
+                        <li class="header__list"><a onclick="closeMenu()" href="#BLOG">BLOG</a></li>
+                        <li class="header__list"><a onclick="closeMenu()" href="#CONTACT">CONTACT</a></li>
+                    </ul>
+                </nav>
             </div>
             <section class="sec1">
                 <div class="sect-box">
@@ -32,10 +46,10 @@
                     <div class="sect-box__text">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                         enim
                         ad minim veniam, quis nostrud exercitation ullamco.</div>
-                    <button class="sect-box__btn">get free now</button>
+
                 </div>
             </section>
-        </div>
+        </div> <button class="sect-box__btn">get free now</button>
         <a class="link" href="#sec2"><svg width="23px" height="37px">
                 <use xlink:href="#scroll" />
             </svg></a>
@@ -57,7 +71,7 @@
         </div>
     </section>
 
-    <section class="services">
+    <section class="services" id="SERVICES">
         <div class="container services__bg">
             <div class="flex flex--column-reverse">
                 <div class="flex flex--column">
@@ -89,7 +103,7 @@
         </div>
     </section>
 
-    <section class="gallery">
+    <section class="gallery" id="GALLERY">
         <div class="container">
             <h2 class="h2-title">Gallery</h2>
             <div class="gallery__descr">Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
@@ -127,7 +141,7 @@
         </div>
     </section>
 
-    <section class="sec3 sec">
+    <section class="sec3 sec" id="CONTACT">
         <div class="container container3">
             <h2 class="contact__title h2-title">Contact</h2>
             <div class="contact__title-descr">For new projects, ideas, business or anything
@@ -153,10 +167,10 @@
         </div>
     </section>
 
-    <section class="sec5">
+    <section class="sec5" id="BLOG">
         <div class="container">
             <div class="container--sm text-center">
-                <h1 class="title">Blog</h1>
+                <h2 class="h2-title">Blog</h2>
                 <div class="title-text">Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
                     laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
                     velit.</div>
@@ -211,7 +225,7 @@
         <div class="container">
             <div class="flex">
                 <div>© 2015 Company. All right reserved.</div>
-                <a href="#"><img src="img/logo-white.png" alt="logo" class="header__img"></a>
+                <div><a href="#"><img src="img/logo-white.png" alt="logo" class="header__img"></a></div>
                 <div>Made with <span class="footer--red">love</span> by Auskteez</div>
             </div>
         </div>

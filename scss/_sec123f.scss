@@ -9,6 +9,12 @@
     position: relative;
     overflow: hidden;
 
+    @include screen($w799) {
+        background-position: center top; 
+        height: 100vh;
+        margin: 0;
+    }
+
     &__img {
         @include hover {
             transform: scale(1.1);
@@ -17,7 +23,6 @@
 
     @include screen($w350)  {
         margin: 0;
-        height: initial;
     }
 }
 
@@ -37,7 +42,7 @@
         }
     }
 
-    @include screen($w350)  {
+    @include screen($w799)  {
         display: none;
     }
 }
@@ -63,14 +68,24 @@
     color: #262626;
     padding: 1rem 0;
     border-top: 3px solid transparent;
+
+    @include screen(799px) {
+        border-top: 0;
+    }
 }
 
 .header__list a:hover {
     border-top: 3px solid #ff6033;
+    @include screen($w799) {
+        border-top: 0;
+    }
 }
 
 .sect-box {
     margin-top: 21rem;
+    @include screen($w799) {
+        margin-top: 12rem;
+    }
 }
 
 .sect-box__title {
@@ -92,6 +107,11 @@
     padding: 15px 25px;
     border: 0;
     margin-top: 35px;
+    @include screen($w799) {
+        position: absolute;
+        left: 15px;
+        bottom: 15px;
+    }
 
     @include hover {
         box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.5);
@@ -101,6 +121,7 @@
 .sec2 {
     background-color: #00b1b1;
     position: relative;
+    overflow: hidden;
 }
 
 .sec .container {
@@ -143,18 +164,24 @@
     margin: 0;
     margin-bottom: 3.5rem;
     line-height: 1;
+    @include screen($w799) {
+        font-size: 6rem;
+    }
 }
 
 @media screen and (max-width: 799px) {
     .sec2__1-2 {
         max-width: 100%;
         display: block;
+        top: 10%;
+        transform: translate(0, 0);
     }
 
     .sec2__img {
-        max-width: 100%;
+        // max-width: 100%;
         max-height: none;
         opacity: .6;
+        top: 100%;
     }
 
     .h2-title {
@@ -254,6 +281,7 @@ textarea.contact-form__input {
 
 .contact__adress {
     text-align: left;
+    text-shadow: 1px 1px 1px white;
 }
 
 .contact__adress--bold {
@@ -279,6 +307,19 @@ footer {
 
     & .flex {
         align-items: center;
+
+        @include screen($w799) {
+            flex-direction: column;
+            & {
+               text-align: center;
+               line-height: 1;
+            }
+            & > div {
+                padding: 5px 0;
+            }
+        }
+
+        
     }
 }
 

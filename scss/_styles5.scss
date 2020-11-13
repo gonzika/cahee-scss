@@ -25,6 +25,9 @@ background-color: #b07cf7;
     max-width: 600px;
     padding: 0 15px;
     margin: 9rem auto 3.8rem;
+    @include screen($w799) {
+        margin: 0 auto;
+    }
 }
 
 & .text-center {
