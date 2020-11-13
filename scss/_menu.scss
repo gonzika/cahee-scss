@@ -63,7 +63,14 @@ nav ul li a {
         animation-iteration-count: 1;
     }
 
-    #toggler-input:not(:checked) ~ #toggler {
+    .leftbar {
+        animation-name: leftbarel;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+    }
+
+    #toggler-input:hover:not(:checked) ~ #toggler {
         position: fixed;
 
         animation-name: leftbarel;
