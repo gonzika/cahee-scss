@@ -47,9 +47,7 @@
     }
 }
 
-.flex--left {
-    justify-content: left;
-}
+
 
 .header__lists {
     list-style-type: none;
@@ -81,6 +79,13 @@
     }
 }
 
+.sec1 {
+    padding: 0;
+    @include screen($w799) {
+        text-align: center;
+    }
+}
+
 .sect-box {
     margin-top: 21rem;
     @include screen($w799) {
@@ -98,6 +103,9 @@
     font-size: 1.7rem;
     margin: 0;
     max-width: 370px;
+    @include screen($w799) {
+        margin: 0 auto;
+    }
 }
 
 .sect-box__btn {
@@ -107,11 +115,6 @@
     padding: 15px 25px;
     border: 0;
     margin-top: 35px;
-    @include screen($w799) {
-        position: absolute;
-        left: 15px;
-        bottom: 15px;
-    }
 
     @include hover {
         box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.5);
@@ -124,11 +127,7 @@
     overflow: hidden;
 }
 
-.sec .container {
-    height: 100vh;
-}
-
-.sec2__1-2 {
+.sec2__right {
     max-width: 50%;
     display: inline;
     padding: 10px;
@@ -136,6 +135,11 @@
     right: 0;
     top: 50%;
     transform: translate(0, -50%);
+    @include screen($w799) {
+        position: initial;
+        padding: 0;
+        transform: translate(0, 0);
+    }
 }
 
 .sect-box2 {
@@ -143,13 +147,9 @@
     align-self: center;
 }
 
-.sec2__img {
+.sec2__left {
     max-width: 500px;
     max-height: 500px;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translate(0, -50%);
 }
 
 @media screen and (max-width: 1100px) {
@@ -170,16 +170,13 @@
 }
 
 @media screen and (max-width: 799px) {
-    .sec2__1-2 {
+    .sec2__right {
         max-width: 100%;
         display: block;
-        top: 10%;
-        transform: translate(0, 0);
     }
 
-    .sec2__img {
-        // max-width: 100%;
-        max-height: none;
+    .sec2__left {
+        position: absolute;
         opacity: .6;
         top: 100%;
     }
@@ -206,16 +203,8 @@
     background-repeat: no-repeat;    
     background-attachment: initial;
     background-size: cover;
-}
-
-.sec3 {
     color: #262626;
     text-align: center;
-}
-
-.sec3 .container {
-    height: auto;
-    padding: 100px 15px;
 }
 
 .contact__title-descr {
@@ -225,7 +214,8 @@
 }
 
 .contact__form {
-    width: 500px;
+    max-width: 500px;
+    width: 100%;
     margin-right: 170px;
 }
 
@@ -233,10 +223,6 @@
     .contact__form {
         width: 100%;
         margin-right: 0;
-    }
-
-    .sec3 .container {
-        padding: 25px 15px;
     }
 }
 
@@ -276,7 +262,8 @@
 }
 
 textarea.contact-form__input {
-    height: 250px;
+    max-height: 250px;
+    //height: 250px;
 }
 
 .contact__adress {

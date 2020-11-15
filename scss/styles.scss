@@ -28,6 +28,23 @@ body {
     background-color: $bgc;
 }
 
+section {
+    padding: 90px 0;
+    min-height: 100vh;
+}
+.section--big-pd {
+    padding: 130px 0;
+}
+.section--no-mh {
+    min-height: initial;
+}
+@media screen and (max-width: $w799) {
+    section, .section--big-pd {
+        padding: 20px 0;
+    }
+}
+
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -39,6 +56,10 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    &--left {
+        justify-content: left;
+    }
 
     &--column {
         flex-direction: column;
