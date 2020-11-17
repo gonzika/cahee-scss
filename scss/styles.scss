@@ -42,6 +42,10 @@ section {
     section, .section--big-pd {
         padding: 20px 0;
     }
+
+    section.sec2 {
+        min-height: auto;
+    }
 }
 
 

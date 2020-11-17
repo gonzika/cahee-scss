@@ -125,6 +125,13 @@
     background-color: #00b1b1;
     position: relative;
     overflow: hidden;
+
+    & .container {
+        @include screen($w799) {
+            max-width: 370px;
+        }
+    }
+    
 }
 
 .sec2__box--right {
@@ -139,6 +146,7 @@
         position: initial;
         padding: 0;
         transform: translate(0, 0);
+        text-align: center;
     }
 }
 
@@ -170,15 +178,13 @@
 }
 
 @media screen and (max-width: 799px) {
-    .sec2__right {
+    .sec2__box--right {
         max-width: 100%;
         display: block;
     }
 
-    .sec2__left {
-        position: absolute;
-        opacity: .6;
-        top: 100%;
+    .sec2__box--left {
+        display: none;
     }
 
     .h2-title {

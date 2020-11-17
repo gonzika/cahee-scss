@@ -3,6 +3,11 @@
     min-height: 100vh;
     overflow: hidden;
     
+    @include screen($w799) {
+        background-color: initial;
+        background: linear-gradient(to bottom, #00b1b1, #ffe92f);
+    }
+    
     @media screen and (max-width: 1050px) {
         & .container {
             max-width: 370px;
@@ -22,7 +27,7 @@
         transform: translate(0, -50%);
 
         @include screen($w799) {
-            opacity: 60%;
+            content: none;
         }
     }
 
