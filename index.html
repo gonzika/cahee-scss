@@ -7,7 +7,8 @@
     <link rel="shortcut icon" href="favicon.png" type="image/png">
 
     <link rel="stylesheet" href="css/styles.css">
-    <meta name="description" content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus fuga deserunt a cumque! Eligendi totam nemo dicta, vero voluptatum quod ipsa itaque id consectetur corporis sit ex magni deleniti voluptas.">
+    <meta name="description"
+        content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus fuga deserunt a cumque! Eligendi totam nemo dicta, vero voluptatum quod ipsa itaque id consectetur corporis sit ex magni deleniti voluptas.">
     <title>Cahee</title>
 
     <script>
@@ -119,15 +120,30 @@
                 commodo consequat.</div>
             <div class="foto">
                 <div class="foto__up flex">
-                    <div class="foto__box foto__box1"><img src="img/gal1.jpg" alt="foto" class="foto__img"></div>
+                    <div class="foto__box foto__box1">
+                        <picture>
+                            <source srcset="img/gal1m.jpg" media="(max-width: 580px)">
+                            <img src="img/gal1.jpg" alt="foto" class="foto__img">
+                        </picture>
+                    </div>
                     <div class="foto__up-right flex flex--column">
                         <div class="foto__box foto__box2"><img src="img/gal2.jpg" alt="foto" class="foto__img"></div>
                         <div class="foto__box foto__box2"><img src="img/gal3.jpg" alt="foto" class="foto__img"></div>
                     </div>
                 </div>
                 <div class="foto__down flex">
-                    <div class="foto__box foto__box3"><img src="img/gal4.jpg" alt="foto" class="foto__img"></div>
-                    <div class="foto__box foto__box3"><img src="img/gal5.jpg" alt="foto" class="foto__img"></div>
+                    <div class="foto__box foto__box3">
+                        <picture>
+                            <source srcset="img/gal4m.jpg" media="(max-width: 580px)">
+                            <img src="img/gal4.jpg" alt="foto" class="foto__img">
+                        </picture>
+                    </div>
+                    <div class="foto__box foto__box3">
+                        <picture>
+                            <source srcset="img/gal5m.jpg" media="(max-width: 580px)">
+                            <img src="img/gal5.jpg" alt="foto" class="foto__img">
+                        </picture>
+                    </div>
                 </div>
             </div>
         </div>

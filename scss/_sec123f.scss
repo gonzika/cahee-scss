@@ -211,6 +211,9 @@
     background-size: cover;
     color: #262626;
     text-align: center;
+    @include screen(580px) {
+        background-image: url('../img/sect3m.jpg');
+    }
 }
 
 .contact__title-descr {
