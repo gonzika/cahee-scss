@@ -2,10 +2,12 @@
     background-color: #70bfff;
     min-height: 100vh;
     overflow: hidden;
+    position: relative;
     
     @include screen($w799) {
         background-color: initial;
         background: linear-gradient(to bottom, #00b1b1, #ffe92f);
+        min-height: auto;
     }
     
     @media screen and (max-width: 1050px) {
@@ -205,7 +207,11 @@
 
     &__form {
         margin-top: 30px;
-        justify-content: initial;
+        
+        &.flex {
+            justify-content: flex-start;
+        }
+
         & .form__inp {
             padding: 20px;
             max-width: 570px;

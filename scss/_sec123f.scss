@@ -4,7 +4,7 @@
     background-repeat: no-repeat;    
     background-attachment: initial;
     background-size: initial;
-    height: calc(100vh - 4rem);
+    height: 100vh;
     margin: 4rem 0 0;
     position: relative;
     overflow: hidden;
@@ -131,23 +131,18 @@
             max-width: 370px;
         }
     }
-    
+
+    &__wrapper {
+        position: relative;
+        align-items: center;
+    }
 }
 
 .sec2__box--right {
     max-width: 50%;
-    display: inline;
     padding: 10px;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translate(0, -50%);
-    @include screen($w799) {
-        position: initial;
-        padding: 0;
-        transform: translate(0, 0);
-        text-align: center;
-    }
+
+    
 }
 
 .sect-box2 {
@@ -237,7 +232,7 @@
 
 .contact-form__input {
     color: #fff;
-    background-color: #00c4c481;
+    background-color: rgba(0, 196, 196, 0.506);
     font-weight: 300;
     font-size: 1.5rem;
     display: block;
@@ -261,7 +256,7 @@
 }
 
 .contact-form__input::placeholder  {
-    color: inherit;
+    color: #fff;
 }
 
 .contact-form__input:hover, 
@@ -271,8 +266,7 @@
 }
 
 textarea.contact-form__input {
-    max-height: 250px;
-    //height: 250px;
+    height: 250px;
 }
 
 .contact__adress {

@@ -23,7 +23,7 @@ html {
 }
 
 body {
-    font: 300 1.7rem 'Raleway', sans-serif;
+    font: 300 1.7rem/1.6 'Raleway', sans-serif;
     color: $prmcol;
     background-color: $bgc;
 }
@@ -31,12 +31,13 @@ body {
 section {
     padding: 90px 0;
     min-height: 100vh;
+    overflow: hidden;
 }
 .section--big-pd {
     padding: 130px 0;
 }
 .section--no-mh {
-    min-height: initial;
+    min-height: auto;
 }
 @media screen and (max-width: $w799) {
     section, .section--big-pd {
@@ -73,7 +74,19 @@ section {
             }
         }
     }
+}
 
+.wrapper {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    @include screen($w799) {
+        position: initial;
+        padding: 0;
+        transform: translate(0, 0);
+        text-align: center;
+    }
 }
 
 @import 'middle';
